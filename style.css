@@ -1,3 +1,9 @@
 .navbar-nav .nav-link {
-    margin-left: 25px;
+	margin-left: 25px;
+}
+
+body {
+	background: url(./imgs/background.png) top right no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
 }
