@@ -1,9 +1,42 @@
-.navbar-nav .nav-link {
-	margin-left: 25px;
-}
-
-body {
-	background: url(./imgs/background.png) top right no-repeat;
+/* body {
+	background: url(./imgs/sf.jpg) top right no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
+} */
+
+body,
+html {
+	height: 100%;
+	margin: 0;
+	font-size: 16px;
+	font-weight: 400;
+	font-family: "Lato", sans-serif;
+	line-height: 1.8em;
+	color: #666;
+}
+
+.pimg1,
+.pimg2,
+.pimg3 {
+	position: relative;
+	opacity: 0.70;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+.pimg1 {
+	background-image: url(./imgs/sf.jpg);
+	min-height: 100%;
+}
+
+.pimg2 {
+	background-image: url(./imgs/work.jpg);
+	min-height: 400px;
+}
+
+.pimg3 {
+	background-image: url(./imgs/projects.jpg);
+	min-height: 400px;
 }
