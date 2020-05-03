@@ -9,39 +9,52 @@
 </head>
 <body>
 
-  <nav>
-    <a href="#profile">Profile</a>
-    <a href="#experiences">Experiences</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#">Contact</a>
+  <nav id="menu">
+    <div class="logo">
+      <h4>Sadeem Khan</h4>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#profile">Profile</a></li>
+      <li><a href="#experiences">Experiences</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+    </ul>
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
   </nav>
 
   <div class="pimg1">
     <div class="ptext">
       <span class="border">
         Sadeem Khan
+        <a href="#skills">Skills</a>
       </span>
     </div>
+    lorem700
+  
   </div>
 
-  <section class="section">
+  <!-- <section class="section">
     <h2>About</h2>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum placeat, officiis ab blanditiis excepturi ex et numquam reiciendis sunt harum unde eaque consequuntur? Ullam pariatur ex nobis exercitationem magnam saepe quidem ab deserunt aspernatur harum laboriosam molestias reprehenderit hic ducimus, amet quaerat vero, autem aperiam perferendis eum. Nesciunt autem laboriosam facere assumenda id dolor ipsa reprehenderit nam molestias amet, dolorum consequatur aperiam consequuntur tempore harum quod sapiente ad maxime accusantium. Accusantium, quibusdam aliquid! Mollitia eum facilis sapiente voluptas architecto pariatur nesciunt nostrum amet? Inventore et, ab nemo, eveniet dolorum maiores fugiat nobis fugit perferendis tempore aliquam nulla quibusdam atque laboriosam!</p>
-  </section>
+  </section> -->
 
   <div class="pimg2">
-    <div class="ptext">
+    <div id="profile" class="ptext">
       <span class="border">
         Image 2 text
       </span>
     </div>
+    lorem1000
   </div>
 
-  <section class="section">
+  <!-- <section class="section">
     <h2>Experiences</h2>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum placeat, officiis ab blanditiis excepturi ex et numquam reiciendis sunt harum unde eaque consequuntur? Ullam pariatur ex nobis exercitationem magnam saepe quidem ab deserunt aspernatur harum laboriosam molestias reprehenderit hic ducimus, amet quaerat vero, autem aperiam perferendis eum. Nesciunt autem laboriosam facere assumenda id dolor ipsa reprehenderit nam molestias amet, dolorum consequatur aperiam consequuntur tempore harum quod sapiente ad maxime accusantium. Accusantium, quibusdam aliquid! Mollitia eum facilis sapiente voluptas architecto pariatur nesciunt nostrum amet? Inventore et, ab nemo, eveniet dolorum maiores fugiat nobis fugit perferendis tempore aliquam nulla quibusdam atque laboriosam!</p>
-  </section>
+  </section> -->
 
   <div class="pimg3">
     <div class="ptext">
@@ -57,9 +70,9 @@
   </section>
 
   <div class="pimg1">
-    <div class="ptext">
+    <div id="skills" class="ptext">
       <span class="border">
-        Sadeem Khan
+        Sadeem Khana
       </span>
     </div>
   </div>
@@ -85,6 +98,28 @@
   </div> -->
 
 
-      
+  <!-- <script src="https://code.jquery.com/jquery-latest.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function() {
+
+    // .scroll() creates an event when the user scrolls
+    $(window).scroll(function() {
+
+      // .scrollTop() retrieves vertical position of the scroll bar for the first element in a set of matched elements
+      var scroll = $(window).scrollTop();
+
+      var objectSelect = $('#profile');
+
+    // .offset() retrieves current position of element relative to document
+    var objectPosition = objectSelect.offset().top;
+
+    if (scroll > objectPosition) {
+      $('#menu').fadeIn(500);
+    } else {
+      $('#menu').fadeOut(500);
+    }
+  });
+});
+</script> -->
 </body>
 </html>
