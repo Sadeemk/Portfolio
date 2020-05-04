@@ -98,7 +98,7 @@
   </div> -->
 
 
-  <!-- <script src="https://code.jquery.com/jquery-latest.js"></script>
+  <script src="https://code.jquery.com/jquery-latest.js"></script>
   <script type="text/javascript">
   $(document).ready(function() {
 
@@ -113,13 +113,15 @@
     // .offset() retrieves current position of element relative to document
     var objectPosition = objectSelect.offset().top;
 
-    if (scroll > objectPosition) {
+    if (scroll > objectPosition/2) {
       $('#menu').fadeIn(500);
     } else {
       $('#menu').fadeOut(500);
     }
   });
 });
-</script> -->
+</script>
+
+<script src="script.js"></script>
 </body>
 </html>
