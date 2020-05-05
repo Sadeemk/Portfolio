@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sadeem Khan</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Nav Bar -->
+  <nav id="menu">
+    <div class="logo">
+      <h4 class="nav-logo"><a href="#">Sadeem Khan</a></h4>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#profile">Profile</a></li>
+      <li><a href="#experiences">Experiences</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+    </ul>
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+  </nav>
+
+  <!-- Home page vav items and name heading -->
+  <div class="pimg1">
+    <div class="home-heading">
+      <h1 class="name"><strong>Sadeem Khan</strong></h1>
+      <div class="home-links">
+        <a href="#profile">Profile</a>
+        <a href="#experiences">Experiences</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a></li>
+      </div>
+    </div>
+  </div>
+
+  <section id="profile" class="pimg2">
+    <div class="section-headings">
+      <span class="border">
+        About Me
+      </span>
+    </div>
+  </section>
+
+  <section id="experiences" class="pimg3">
+    <div class="section-headings">
+      <span class="border">
+        Professional Experiences
+      </span>
+    </div>
+  </section>
+
+  <section id="projects" class="pimg4">
+    <div class="section-headings">
+      <span class="border">
+        Some of my projects!
+      </span>
+    </div>
+  </section>
+
+  <section id="skills" class="pimg1">
+    <div class="section-headings">
+      <span class="border">
+        My Skills
+      </span>
+    </div>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-latest.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function() {
+
+    // .scroll() creates an event when the user scrolls
+    $(window).scroll(function() {
+
+      // .scrollTop() retrieves vertical position of the scroll bar for the first element in a set of matched elements
+      var scroll = $(window).scrollTop();
+
+      var objectSelect = $('#profile');
+
+    // .offset() retrieves current position of element relative to document
+    var objectPosition = objectSelect.offset().top;
+
+    if (scroll > (objectPosition / 2) ) {
+      $('#menu').fadeIn(500);
+    } else {
+      $('#menu').fadeOut(500);
+    }
+  });
+});
+</script>
+
+<script src="js/script.js"></script>
+</body>
+</html>
