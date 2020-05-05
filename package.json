@@ -1,0 +1,22 @@
+{
+	"name": "portfolio",
+	"version": "1.0.0",
+	"description": "Portfolio",
+	"main": "index.js",
+	"scripts": {
+		"deploy": "gh-pages -d dist"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Sadeemk/Portfolio.git"
+	},
+	"author": "Sadeem Khan",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Sadeemk/Portfolio/issues"
+	},
+	"homepage": "https://Sadeemk.github.io/Portfolio",
+	"dependencies": {
+		"gh-pages": "^2.2.0"
+	}
+}
