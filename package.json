@@ -4,8 +4,8 @@
 	"description": "Portfolio",
 	"main": "index.js",
 	"scripts": {
-		"deploy": "gh-pages -d dist",
-		"start": "serve -d dist"
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "serve dist"
 	},
 	"repository": {
 		"type": "git",
