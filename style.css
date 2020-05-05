@@ -17,35 +17,65 @@ html {
 	color: #666;
 }
 
-nav {
+.section-headings {
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	text-align: center;
+	color: black;
+	font-size: 27px;
+	text-transform: uppercase;
+}
+
+.section-headings .border {
+	background-color: #111;
+	color: #fff;
+	padding: 20px;
+}
+/* nav {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	min-height: 1vh;
 	padding-left: 1%;
 	background-color: black;
+	color: white;
+} */
+nav {
+	display: flex;
 }
 
 #menu {
 	position: fixed;
 	top: 0px;
 	width: 100%;
-	height: 75px;
+	height: 8%;
 	z-index: 9999;
 	display: none;
+	justify-content: space-between;
+	align-items: center;
+	min-height: 1vh;
+	padding-left: 1%;
+	background-color: black;
+	color: white;
 }
 
 .logo {
 	text-transform: uppercase;
 	letter-spacing: 3px;
 	font-size: 22px;
+}
+
+.logo a {
+	text-decoration: none;
 	color: white;
 }
 
 .nav-links {
 	display: flex;
 	justify-content: space-around;
-	width: 30%;
+	align-items: center;
+	width: 40%;
 }
 
 .nav-links a {
@@ -54,16 +84,71 @@ nav {
 	font-weight: bold;
 	font-size: 16px;
 	color: white;
+	padding-bottom: 3%;
 }
 
 .nav-links li {
 	list-style: none;
 }
 
+/* .nav-links a {
+	text-decoration: none;
+	display: flex;
+	list-style: none;
+	height: 100%;
+	justify-content: space-around;
+	align-items: center;
+	background-color: red;
+} */
+
+/* .nav-links li {
+	display: flex;
+	list-style: none;
+	height: 100%;
+	justify-content: space-around;
+	align-items: center;
+	background-color: red;
+} */
+
+/* .nav-links li a {
+	justify-content: space-around;
+	align-items: center;
+	height: 100%;
+	text-decoration: none;
+	letter-spacing: 1px;
+	font-weight: bold;
+	font-size: 16px;
+	color: white;
+} */
+
+.active {
+	border-bottom: 2px solid white;
+	transition: all 0.6s ease;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+}
+
+.nav-links li a:hover {
+	font-size: 20px;
+	border-bottom: 2px solid white;
+	transition: all 0.4s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+}
+
+.nav-selected {
+	font-size: 20px;
+	border-bottom: 2px solid white;
+	transition: all 0.4s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+}
+
 .burger {
 	display: none;
 	padding-right: 5%;
 	cursor: pointer;
+	align-self: center;
 }
 
 .burger div {
@@ -144,7 +229,8 @@ nav {
 
 .pimg1,
 .pimg2,
-.pimg3 {
+.pimg3,
+.pimg4 {
 	position: relative;
 	opacity: 0.80;
 	background-position: center;
@@ -154,35 +240,28 @@ nav {
 }
 
 .pimg1 {
-	background-image: url(./imgs/sfsunset.jpg);
+	background-image: url(./imgs/homebg.jpg);
 	min-height: 100%;
 }
 
 .pimg2 {
-	background-image: url(./imgs/work.jpg);
+	background-image: url(./imgs/aboutbg.jpg);
 	min-height: 100%;
 }
 
 .pimg3 {
-	background-image: url(./imgs/projects.jpg);
+	background-image: url(./imgs/experiencesbg.jpg);
 	min-height: 100%;
 }
 
-/* .home-heading {
-	position: absolute;
-	top: 50%;
-	width: 100%;
-	text-align: center;
-	color: black;
-	font-size: 55px;
-	letter-spacing: 4px;
-	text-transform: uppercase;
-	font-weight: 500;
-} */
+.pimg4 {
+	background-image: url(./imgs/projectsbg.jpg);
+	min-height: 100%;
+}
 
 .home-heading {
 	position: absolute;
-	top: 42%;
+	top: 35%;
 	width: 100%;
 	text-align: center;
 	color: black;
@@ -200,6 +279,15 @@ nav {
 	position: relative;
 	text-decoration: none;
 	padding: 30px;
-	font-weight: 600;
+	font-weight: 500;
 	letter-spacing: 1px;
+}
+
+.home-links a:hover {
+	color: rgba(1, 1, 1, 0.9);
+	font-weight: bolder;
+	font-size: 20px;
+	transition: all 0.3s;
+	-webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
 }

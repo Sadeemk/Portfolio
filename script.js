@@ -21,4 +21,56 @@ const navSlide = () => {
 	});
 };
 
-navSlide();
+// const navFadeIn = () => {
+// 	const nav = document.querySelector('nav');
+// 	nav.addEventListener('scroll', () => {
+// 		const section1 = document.querySelector('#profile');
+// 		let y = section1.scrollTop;
+
+// 		if (window.pageYOffset > x) {
+// 			document.querySelector('pimg2').classList.remove('pimg2');
+// 		} else {
+// 			document.querySelector('pimg2').classList.remove('pimg2');
+// 		}
+// 	});
+// };
+
+const selectedHighlight = () => {
+	const changeNav = (entries, observer) => {
+		entries.forEach((entry) => {
+			// verify the element is intersecting
+			if (entry.isIntersecting && entry.intersectionRatio >= 0.75) {
+				// remove old active class
+				let currActive = document.querySelector('.active');
+				if (currActive != null) {
+					currActive.classList.remove('active');
+				}
+				//document.querySelector('.active').classList.remove('active');
+				// get id of the intersecting section
+				let id = entry.target.getAttribute('id');
+				// find matching link & add appropriate class
+				let newLink = document.querySelector(`[href="#${id}"]`).classList.add('active');
+			}
+		});
+	};
+
+	// init the observer
+	const options = {
+		threshold: 0.75
+	};
+
+	const observer = new IntersectionObserver(changeNav, options);
+
+	// target the elements to be observed
+	const sections = document.querySelectorAll('section');
+	sections.forEach((section) => {
+		observer.observe(section);
+	});
+};
+
+const app = () => {
+	navSlide();
+	selectedHighlight();
+};
+
+app();
