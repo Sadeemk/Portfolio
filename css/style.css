@@ -90,21 +90,22 @@ nav {
 	-moz-transition: all 0.5s;
 }
 
-.nav-links li a:hover {
+/* .nav-links li a:hover {
 	font-size: 20px;
 	border-bottom: 2px solid white;
+	background-color: white;
 	transition: all 0.4s;
 	-webkit-transition: all 0.5s;
 	-moz-transition: all 0.5s;
-}
+} */
 
-.nav-selected {
+/* .nav-selected {
 	font-size: 20px;
 	border-bottom: 2px solid white;
 	transition: all 0.4s;
 	-webkit-transition: all 0.5s;
 	-moz-transition: all 0.5s;
-}
+} */
 
 .burger {
 	display: none;
