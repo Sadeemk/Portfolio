@@ -98,7 +98,6 @@ nav {
 }
 
 .nav-links li a:hover {
-	font-size: 20px;
 	color: #f0e089;
 	transition: all 0.4s;
 	-webkit-transition: all 0.5s;
