@@ -16,28 +16,12 @@ html {
 	font-family: "raleway", sans-serif;
 	/* font-family: "Laro", sans-serif; */
 	line-height: 1.8em;
-	color: #666;
+	color: black;
 }
 
 section {
 	min-height: 100%;
 	padding: 60px 10% 90px 10%;
-}
-
-.section-headings {
-	/* position: absolute; */
-	top: 50%;
-	width: 100%;
-	text-align: center;
-	color: black;
-	font-size: 27px;
-	text-transform: uppercase;
-}
-
-.section-headings .border {
-	background-color: #111;
-	color: #fff;
-	padding: 20px;
 }
 
 nav {
@@ -212,7 +196,7 @@ nav {
 }
 
 .pimg3 {
-	background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url(../imgs/experiencesbg.jpg);
+	background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(../imgs/test5.jpg);
 	min-height: 100%;
 }
 
@@ -278,7 +262,21 @@ nav {
 	-moz-transition: all 0.4s;
 }
 
-.container {
+.section-headings {
+	letter-spacing: 1px;
+	font-size: 30px;
+	margin: 0;
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+hr {
+	width: 50%;
+	border-top: 1px solid black;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.abt-container {
 	height: 100%;
 	display: flex;
 	flex-wrap: wrap;
@@ -295,11 +293,6 @@ nav {
 	max-height: 100%;
 }
 
-.about-content > h2 {
-	letter-spacing: 1px;
-	font-size: 30px;
-}
-
 .about-content {
 	flex: 1 1 300px;
 	/* background-color: #34373c; */
@@ -307,12 +300,6 @@ nav {
 	color: black;
 	display: flex;
 	flex-direction: column;
-}
-
-.about-content > hr {
-	width: 50%;
-	border-top: 1px solid black;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .about-content > p {
@@ -357,8 +344,32 @@ a[href="mailto:imsadeem98@gmail.com"] i:hover {
 	-moz-transition: all 0.5s;
 }
 
+.job {
+	/* background-color: #edf1f0; */
+	background-color: rgba(245, 245, 245, .7);
+	/* border: 1px solid gray; */
+	width: 70%;
+	height: 100%;
+	margin: 100px auto;
+	text-align: center;
+}
+
+.job-company {
+	padding-top: 15px;
+}
+
+.company-img {
+	max-width: 75px;
+	max-height: 75px;
+}
+
+.job > p:last-child {
+	padding-bottom: 65px;
+}
+
 footer p {
 	color: white;
+	background-color: #34373c;
 	background-color: #34373c;
 	margin-top: 0px;
 }
