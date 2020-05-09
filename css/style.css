@@ -158,7 +158,7 @@ nav {
 	.pimg1,
 	.pimg2,
 	.pimg3 {
-		background-attachment: scroll;
+		background-attachment: fixed;
 	}
 }
 
@@ -200,7 +200,8 @@ nav {
 }
 
 .pimg1 {
-	background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url(../imgs/homebg.jpg);
+	/* background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url(../imgs/homebg.jpg); */
+	background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url(../imgs/new.jpg);
 	min-height: 100%;
 }
 
