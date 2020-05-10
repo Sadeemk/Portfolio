@@ -21,56 +21,115 @@ const navSlide = () => {
 	});
 };
 
-// const navFadeIn = () => {
-// 	const nav = document.querySelector('nav');
-// 	nav.addEventListener('scroll', () => {
-// 		const section1 = document.querySelector('#profile');
-// 		let y = section1.scrollTop;
+const navFadeIn = () => {
+	$(document).ready(function() {
+		// .scroll() creates an event when the user scrolls
+		$(window).scroll(function() {
+			// .scrollTop() retrieves vertical position of the scroll bar for the first element in a set of matched elements
+			let scroll = $(window).scrollTop();
 
-// 		if (window.pageYOffset > x) {
-// 			document.querySelector('pimg2').classList.remove('pimg2');
-// 		} else {
-// 			document.querySelector('pimg2').classList.remove('pimg2');
-// 		}
-// 	});
-// };
+			let objectSelect = $('#profile');
 
-const selectedHighlight = () => {
-	const changeNav = (entries, observer) => {
-		entries.forEach((entry) => {
-			// verify the element is intersecting
-			if (entry.isIntersecting && entry.intersectionRatio >= 0.75) {
-				// remove old active class
-				let currActive = document.querySelector('.active');
-				if (currActive != null) {
-					currActive.classList.remove('active');
-				}
-				//document.querySelector('.active').classList.remove('active');
-				// get id of the intersecting section
-				let id = entry.target.getAttribute('id');
-				// find matching link & add appropriate class
-				let newLink = document.querySelector(`[href="#${id}"]`).classList.add('active');
+			// .offset() retrieves current position of element relative to document
+			let objectPosition = objectSelect.offset().top;
+
+			if (scroll > objectPosition / 2) {
+				$('#menu').fadeIn(500);
+			} else {
+				$('#menu').fadeOut(500);
 			}
 		});
-	};
-
-	// init the observer
-	const options = {
-		threshold: 0.75
-	};
-
-	const observer = new IntersectionObserver(changeNav, options);
-
-	// target the elements to be observed
-	const sections = document.querySelectorAll('section');
-	sections.forEach((section) => {
-		observer.observe(section);
 	});
+};
+
+const navHighlight = () => {
+	// cache the navigation links
+	let $navigationLinks = document.querySelectorAll('nav > ul > li > a');
+	// cache (in reversed order) the sections
+	let $sections = document.getElementsByTagName('section');
+
+	// map each section id to their corresponding navigation link
+	let sectionIdTonavigationLink = {};
+	for (let i = $sections.length - 1; i >= 0; i--) {
+		let id = $sections[i].id;
+		sectionIdTonavigationLink[id] = document.querySelectorAll('nav > ul > li > a[href=\\#' + id + ']') || null;
+	}
+
+	// throttle function, enforces a minimum time interval
+	function throttle(fn, interval) {
+		let lastCall, timeoutId;
+		return function() {
+			let now = new Date().getTime();
+			if (lastCall && now < lastCall + interval) {
+				// if we are inside the interval we wait
+				clearTimeout(timeoutId);
+				timeoutId = setTimeout(function() {
+					lastCall = now;
+					fn.call();
+				}, interval - (now - lastCall));
+			} else {
+				// otherwise, we directly call the function
+				lastCall = now;
+				fn.call();
+			}
+		};
+	}
+
+	function getOffset(el) {
+		let _x = 0;
+		let _y = 0;
+		while (el && !isNaN(el.offsetLeft) && !isNaN(el.offsetTop)) {
+			_x += el.offsetLeft - el.scrollLeft;
+			_y += el.offsetTop - el.scrollTop;
+			el = el.offsetParent;
+		}
+		return { top: _y, left: _x };
+	}
+
+	function highlightNavigation() {
+		// get the current vertical position of the scroll bar
+		let scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+		// iterate the sections
+		for (let i = $sections.length - 1; i >= 0; i--) {
+			let currentSection = $sections[i];
+			// get the position of the section
+			let sectionTop = getOffset(currentSection).top;
+
+			// if the user has scrolled over the top of the section
+			if (scrollPosition >= sectionTop - 250) {
+				// get the section id
+				let id = currentSection.id;
+				// get the corresponding navigation link
+				let $navigationLink = sectionIdTonavigationLink[id];
+				// if the link is not active
+				if (typeof $navigationLink[0] !== 'undefined') {
+					if (!$navigationLink[0].classList.contains('active')) {
+						// remove .active class from all the links
+						for (i = 0; i < $navigationLinks.length; i++) {
+							$navigationLinks[i].className = $navigationLinks[i].className.replace(/ active/, '');
+						}
+						// add .active class to the current link
+						$navigationLink[0].className += ' active';
+					}
+				} else {
+					// remove .active class from all the links
+					for (i = 0; i < $navigationLinks.length; i++) {
+						$navigationLinks[i].className = $navigationLinks[i].className.replace(/ active/, '');
+					}
+				}
+				// we have found our section, so we return false to exit the each loop
+				return false;
+			}
+		}
+	}
+	window.addEventListener('scroll', throttle(highlightNavigation, 150));
 };
 
 const app = () => {
 	navSlide();
-	selectedHighlight();
+	navFadeIn();
+	navHighlight();
 };
 
 app();
