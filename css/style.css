@@ -142,7 +142,8 @@ nav {
 @media (max-width: 568px) {
 	.pimg1,
 	.pimg2,
-	.pimg3 {
+	.pimg3,
+	.pimg4 {
 		background-attachment: fixed;
 	}
 }
@@ -175,7 +176,8 @@ nav {
 .pimg1,
 .pimg2,
 .pimg3,
-.pimg4 {
+.pimg4,
+.pimg5 {
 	position: relative;
 	/* opacity: 0.80; */
 	background-position: center;
@@ -193,16 +195,21 @@ nav {
 .pimg2 {
 	background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../imgs/about2.jpg);
 	/* background-image: url(../imgs/aboutbg.jpg); */
-	height: 100%;
+	min-height: 100%;
 }
 
 .pimg3 {
-	background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(../imgs/test24.jpg);
+	background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(../imgs/newexp.jpg);
 	min-height: 100%;
 }
 
 .pimg4 {
 	background-image: url(../imgs/projectsbg.jpg);
+	min-height: 100%;
+}
+
+.pimg5 {
+	/* background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(../imgs/newexp.jpg); */
 	min-height: 100%;
 }
 
@@ -347,8 +354,8 @@ a[href="mailto:imsadeem98@gmail.com"] i:hover {
 
 .job {
 	/* background-color: #edf1f0; */
-	background-color: rgba(245, 245, 245, .7);
-	/* border: 1px solid gray; */
+	background-color: rgba(240, 240, 240, .7);
+	/* border: 1px solid black; */
 	width: 70%;
 	height: 100%;
 	margin: 100px auto;
