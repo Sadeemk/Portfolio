@@ -1,4 +1,4 @@
-const navSlide = () => {
+const navSlideMobile = () => {
 	const burger = document.querySelector('.burger');
 	const nav = document.querySelector('.nav-links');
 	const navLinks = document.querySelectorAll('.nav-links li');
@@ -21,26 +21,12 @@ const navSlide = () => {
 	});
 };
 
-// const navFadeIn = () => {
-// 	$(document).ready(function() {
-// 		// .scroll() creates an event when the user scrolls
-// 		$(window).scroll(function() {
-// 			// .scrollTop() retrieves vertical position of the scroll bar for the first element in a set of matched elements
-// 			let scroll = $(window).scrollTop();
-
-// 			let objectSelect = $('#profile');
-
-// 			// .offset() retrieves current position of element relative to document
-// 			let objectPosition = objectSelect.offset().top;
-
-// 			if (scroll > objectPosition / 2) {
-// 				$('#menu').fadeIn(500);
-// 			} else {
-// 				$('#menu').fadeOut(500);
-// 			}
-// 		});
-// 	});
-// };
+const navFixedOnScroll = () => {
+	window.addEventListener('scroll', () => {
+		let nav = document.querySelector('nav');
+		nav.classList.toggle('sticky', window.scrollY > 0);
+	});
+};
 
 const navHighlight = () => {
 	// cache the navigation links
@@ -126,32 +112,9 @@ const navHighlight = () => {
 	window.addEventListener('scroll', throttle(highlightNavigation, 150));
 };
 
-const stickyNav = () => {
-	// When the user scrolls the page, execute myFunction
-	window.onscroll = function() {
-		myFunction();
-	};
-
-	// Get the navbar
-	var navbar = document.getElementById('menu');
-
-	// Get the offset position of the navbar
-	var sticky = navbar.offsetTop;
-
-	// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-	function myFunction() {
-		if (window.pageYOffset >= sticky) {
-			navbar.classList.add('sticky');
-		} else {
-			navbar.classList.remove('sticky');
-		}
-	}
-};
-
 const app = () => {
-	navSlide();
-	stickyNav();
-	// navFadeIn();
+	navSlideMobile();
+	navFixedOnScroll();
 	navHighlight();
 };
 
