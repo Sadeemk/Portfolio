@@ -197,13 +197,34 @@ nav {
 }
 
 .showcase {
-	width: 100%;
 	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
 .showcase > h1 {
-	position: absolute;
+	font-size: 60px;
+	letter-spacing: 6px;
+	line-height: 55px;
 	text-align: center;
+	padding: 15px;
+}
+
+.showcase > h3 {
+	font-size: 30px;
+	letter-spacing: 2px;
+	line-height: 55px;
+	text-align: center;
+	padding: 15px;
+}
+
+.showcase > hr {
+	width: 20%;
+	border-top: 3px solid red;
+	/* border-bottom: 1px solid rgba(0, 0, 0); */
 }
 /* HOMEPAGE STYLES END HERE */
 
@@ -274,4 +295,29 @@ a[href="mailto:imsadeem98@gmail.com"] i:hover {
 	transition: all 0.4s ease;
 	-webkit-transition: all 0.5s;
 	-moz-transition: all 0.5s;
+}
+/* ABOUT ME STYLES END HERE */
+
+/* EXPERIENCES STYLES START HERE */
+.job {
+	/* background-color: #edf1f0; */
+	background-color: rgba(240, 240, 240, .7);
+	/* border: 1px solid black; */
+	width: 70%;
+	height: 100%;
+	margin: 100px auto;
+	text-align: center;
+}
+
+.job-company {
+	padding-top: 15px;
+}
+
+.company-img {
+	max-width: 75px;
+	max-height: 75px;
+}
+
+.job > p:last-child {
+	padding-bottom: 65px;
 }
