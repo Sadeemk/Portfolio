@@ -214,6 +214,7 @@ nav.sticky .nav-links li a:hover {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../imgs/about2.jpg);
+	background-attachment: fixed;
 }
 
 .showcase {
