@@ -6,7 +6,7 @@
 
 html {
 	scroll-behavior: smooth;
-	scroll-padding-top: 70px;
+	scroll-padding-top: 8vh;
 }
 
 body,
@@ -16,6 +16,7 @@ html {
 	font-family: "Laro", sans-serif;
 	line-height: 1.8em;
 	color: black;
+	background-color: #efefef;
 }
 
 /* NAV STYLES START HERE */
@@ -30,13 +31,23 @@ nav {
 	min-height: 8vh;
 	background: rgba(0, 0, 0, 0);
 	transition: 0.6s;
-	padding: 40px 100px;
+	padding: 20px 70px;
 	z-index: 1000;
+}
+
+nav.sticky .nav-links li a {
+	color: white;
+	transition: 1s;
+}
+
+nav.sticky .logo .nav-logo a {
+	color: white;
+	transition: 1s;
 }
 
 .sticky {
 	padding: 5px 50px;
-	background-color: white;
+	background-color: #191919;
 }
 
 .logo {
@@ -87,7 +98,7 @@ nav {
 .burger div {
 	width: 25px;
 	height: 3px;
-	background-color: red;
+	background-color: #ff3b3f;
 	margin: 5px;
 	transition: all 0.3s ease;
 }
@@ -170,14 +181,23 @@ nav {
 	transform: rotate(45deg) translate(-5px, -6px);
 }
 .active {
-	border-bottom: 2px solid black;
+	border-bottom: 2px solid white;
 	transition: all 0.6s ease;
 	-webkit-transition: all 0.5s;
 	-moz-transition: all 0.5s;
 }
 
-.nav-links li a:hover {
-	color: #f0e089;
+nav .nav-links li a:hover {
+	color: #b80f0a;
+	/* color: #f0e089; */
+	transition: all 0.4s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+}
+
+nav.sticky .nav-links li a:hover {
+	color: #b80f0a;
+	/* color: #f0e089; */
 	transition: all 0.4s;
 	-webkit-transition: all 0.5s;
 	-moz-transition: all 0.5s;
@@ -193,7 +213,7 @@ nav {
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../imgs/about2.jpg);
+	background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../imgs/about2.jpg);
 }
 
 .showcase {
@@ -223,22 +243,55 @@ nav {
 
 .showcase > hr {
 	width: 20%;
-	border-top: 3px solid red;
-	/* border-bottom: 1px solid rgba(0, 0, 0); */
+	border: 2px solid #c0c0c0;
+}
+.social-links {
+	width: 220px;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.social-links > i {
+	color: black;
+	cursor: pointer;
+}
+
+.social-links > i:hover {
+	color: #c0c0c0;
+	transition: all 0.8s ease;
+	-webkit-transition: all 0.8s;
+	-moz-transition: all 0.8s;
 }
 /* HOMEPAGE STYLES END HERE */
 
 /* ABOUT ME PAGE STYLES START HERE */
 .abt-container {
-	height: 100%;
+	min-height: 100vh;
+	width: 80%;
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: auto;
+}
+
+@media screen and (max-width: 425px) {
+	.abt-container {
+		width: 100%;
+	}
+	.about-image {
+		flex: 1 1 300px;
+		align-self: center;
+		justify-content: center;
+		padding-top: 30px;
+		padding-left: 0px;
+	}
 }
 
 .about-image {
 	flex: 1 1 300px;
 	align-self: center;
-	padding-right: 5%;
+	height: 90vh;
+	/* padding-right: 5%; */
 }
 
 .about-image > img {
@@ -248,60 +301,111 @@ nav {
 
 .about-content {
 	flex: 1 1 300px;
+	min-height: 70vh;
 	/* background-color: #34373c; */
-	text-align: center;
+	/* justify-content: flex-start; */
+	align-self: flex-start;
+	/* text-align: center; */
 	color: black;
 	display: flex;
 	flex-direction: column;
+	/* justify-content: center; */
+	margin: 15px;
 }
 
-.about-content > p {
-	font-weight: 700;
+.about-content > h2 {
+	/* display: flex; */
+	/* justify-content: center; */
+	align-self: center;
 }
 
-.about-content > div > ul {
+.about-content > .about-description {
+	/* display: flex; */
+	/* font-weight: 700; */
+	margin-top: auto;
+	/* align-self: flex-end; */
+}
+
+.about-social {
+	/* justify-content: flex-end; */
+	margin-top: auto;
+}
+
+.about-content > .about-social > ul {
 	display: flex;
-	justify-content: space-evenly;
-	align-items: flex-end;
+	justify-content: flex-start;
+	/* align-items: flex-end; */
 	padding: 0;
 	/* margin-top: auto; */
 }
 
-.about-content > div > ul > li {
+.about-content > .about-social > ul > li {
 	list-style: none;
+	padding-right: 10px;
 }
 
-i {
-	color: black;
+a[href="https://www.linkedin.com/in/sadeemk/"] i {
+	/* color: black; */
+	color: #0e76a8;
+}
+
+a[href="https://twitter.com/sadeemkhan_"] i {
+	/* color: black; */
+	color: #1da1f2;
+}
+
+a[href="https://github.com/Sadeemk"] i {
+	color: #f1502f;
+}
+
+a[href="mailto:imsadeem98@gmail.com"] i {
+	color: #d44638;
+	transition: all 0.4s ease;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
 }
 
 a[href="https://www.linkedin.com/in/sadeemk/"] i:hover {
-	color: #0e76a8;
-	transition: all 0.4s ease;
-	-webkit-transition: all 0.5s;
-	-moz-transition: all 0.5s;
+	color: white;
+	background-color: #0e76a8;
+	/* border: 1px solid black; */
+	transition: all 0.7s ease;
+	-webkit-transition: all 0.7s;
+	-moz-transition: all 0.7s;
+}
+
+a[href="https://twitter.com/sadeemkhan_"] i:hover {
+	color: white;
+	background-color: #1da1f2;
+	/* border: 1px solid black; */
+	transition: all 0.7s ease;
+	-webkit-transition: all 0.7s;
+	-moz-transition: all 0.7s;
 }
 
 a[href="https://github.com/Sadeemk"] i:hover {
-	color: #f1502f;
-	transition: all 0.4s ease;
-	-webkit-transition: all 0.5s;
-	-moz-transition: all 0.5s;
-	/* 03fffb */
+	color: white;
+	background-color: #f1502f;
+	/* border: 1px solid black; */
+	transition: all 0.7s ease;
+	-webkit-transition: all 0.7s;
+	-moz-transition: all 0.7s;
 }
 
 a[href="mailto:imsadeem98@gmail.com"] i:hover {
-	color: #03fffb;
-	transition: all 0.4s ease;
-	-webkit-transition: all 0.5s;
-	-moz-transition: all 0.5s;
+	color: white;
+	background-color: #d44638;
+	/* border: 1px solid black; */
+	transition: all 0.7s ease;
+	-webkit-transition: all 0.7s;
+	-moz-transition: all 0.7s;
 }
 /* ABOUT ME STYLES END HERE */
 
 /* EXPERIENCES STYLES START HERE */
 .job {
-	/* background-color: #edf1f0; */
-	background-color: rgba(240, 240, 240, .7);
+	background-color: #f8eee8;
+	/* background-color: rgba(240, 240, 240, .7); */
 	/* border: 1px solid black; */
 	width: 70%;
 	height: 100%;
@@ -321,3 +425,4 @@ a[href="mailto:imsadeem98@gmail.com"] i:hover {
 .job > p:last-child {
 	padding-bottom: 65px;
 }
+/* EXPERIENCES STYLES END HERE */

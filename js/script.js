@@ -24,7 +24,13 @@ const navSlideMobile = () => {
 const navFixedOnScroll = () => {
 	window.addEventListener('scroll', () => {
 		let nav = document.querySelector('nav');
-		nav.classList.toggle('sticky', window.scrollY > 0);
+
+		let scrollP = window.scrollY;
+		if (scrollP > 0) {
+			nav.classList.add('sticky');
+		} else {
+			nav.classList.remove('sticky');
+		}
 	});
 };
 
