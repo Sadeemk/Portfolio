@@ -258,6 +258,7 @@ nav.sticky .nav-links li a:hover {
 
 .social-links > i:hover {
 	color: #c0c0c0;
+	/* color: white; */
 	transition: all 0.8s ease;
 	-webkit-transition: all 0.8s;
 	-moz-transition: all 0.8s;
