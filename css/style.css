@@ -466,4 +466,8 @@ a[href="mailto:imsadeem98@gmail.com"] i:hover {
 	grid-template-columns: repeat(2, 1fr);
 	gap: 20%;
 }
+
+div > .skilltype-container > i > p {
+	font-size: 20px;
+}
 /* MY SKILLS STYLES END HERE */
