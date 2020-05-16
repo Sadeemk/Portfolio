@@ -217,6 +217,20 @@ nav.sticky .nav-links li a:hover {
 	background-attachment: fixed;
 }
 
+@media screen and (max-width: 425px) {
+	.banner {
+		position: relative;
+		top: 0;
+		height: 100vh;
+		width: 100%;
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../imgs/about2.jpg);
+		background-attachment: scroll;
+	}
+}
+
 .showcase {
 	height: 100%;
 	width: 100%;
@@ -428,3 +442,9 @@ a[href="mailto:imsadeem98@gmail.com"] i:hover {
 	padding-bottom: 65px;
 }
 /* EXPERIENCES STYLES END HERE */
+
+/* MY SKILLS STYLES START HERE */
+.skills-container > i {
+	font-size: 45px;
+}
+/* MY SKILLS STYLES END HERE */
