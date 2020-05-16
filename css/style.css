@@ -445,29 +445,53 @@ a[href="mailto:imsadeem98@gmail.com"] i:hover {
 /* EXPERIENCES STYLES END HERE */
 
 /* MY SKILLS STYLES START HERE */
-.skilltype-container > i {
+.skill-category > i {
 	font-size: 60px;
 	color: white;
 }
 
 .skills-container {
 	background-color: gray;
-	min-height: 100vh;
+	min-height: 500px;
+	min-height: 100%;
 	width: 80%;
-	margin: auto;
+	margin: 100px auto;
 	text-align: center;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 10%;
 }
 
-.skilltype-container {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	gap: 20%;
+div > .skilltype-header {
+	margin-bottom: 50px;
+	padding-top: 40px;
+	font-size: 22px;
 }
 
-div > .skilltype-container > i > p {
+.skill-category {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 40px;
+	padding-bottom: 30px;
+}
+
+div > .skill-category > i > p {
+	padding-top: 5px;
 	font-size: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+	.skills-container {
+		width: 90%;
+	}
+}
+
+@media screen and (max-width: 868px) {
+	.skills-container {
+		/* min-height: 500px; */
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		gap: 20px;
+	}
 }
 /* MY SKILLS STYLES END HERE */
