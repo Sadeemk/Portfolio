@@ -469,7 +469,6 @@ a[href="mailto:imsadeem98@gmail.com"] i:hover {
 /* EXPERIENCES STYLES END HERE */
 
 /* MY SKILLS STYLES START HERE */
-
 .skills-container {
 	/* background-color: #ffffff; */
 	min-height: 500px;
@@ -483,9 +482,15 @@ a[href="mailto:imsadeem98@gmail.com"] i:hover {
 }
 
 div > .skilltype-header {
-	margin-bottom: 50px;
+	margin-bottom: 4px;
 	padding-top: 40px;
 	font-size: 22px;
+}
+
+.skills-container > div > hr {
+	border: 1px solid red;
+	width: 25%;
+	margin: 0 auto 36px auto;
 }
 
 .skill-category {
@@ -496,7 +501,7 @@ div > .skilltype-header {
 }
 
 .skill-category > i {
-	font-size: 60px;
+	font-size: 55px;
 	color: white;
 }
 
