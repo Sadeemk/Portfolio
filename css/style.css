@@ -12,11 +12,35 @@ html {
 body,
 html {
 	width: 100%;
-	font-family: "raleway", sans-serif;
+	/* font-family: "raleway", sans-serif; */
 	font-family: "Laro", sans-serif;
 	line-height: 1.8em;
 	color: black;
-	background-color: #efefef;
+	/* background-color: #efefef; */
+	/* background: linear-gradient(
+		90deg,
+		rgba(255, 255, 255, 1) 0%,
+		rgba(234, 234, 240, 1) 52%,
+		rgba(232, 232, 232, 1) 100%
+	); */
+	/* background: #ece9e6;
+	background: -webkit-linear-gradient(to right, #ffffff, #ece9e6); 
+	background: linear-gradient(
+		to bottom,
+		#ffffff,
+		#ece9e6
+	);  */
+	background: #8e9eab; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to right,
+		#eef2f3,
+		#8e9eab
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.section-headings {
+	text-align: center;
 }
 
 /* NAV STYLES START HERE */
@@ -445,13 +469,9 @@ a[href="mailto:imsadeem98@gmail.com"] i:hover {
 /* EXPERIENCES STYLES END HERE */
 
 /* MY SKILLS STYLES START HERE */
-.skill-category > i {
-	font-size: 60px;
-	color: white;
-}
 
 .skills-container {
-	background-color: gray;
+	/* background-color: #ffffff; */
 	min-height: 500px;
 	min-height: 100%;
 	width: 80%;
@@ -475,9 +495,16 @@ div > .skilltype-header {
 	padding-bottom: 30px;
 }
 
+.skill-category > i {
+	font-size: 60px;
+	color: white;
+}
+
 div > .skill-category > i > p {
-	padding-top: 5px;
-	font-size: 20px;
+	padding-top: 13px;
+	font-size: 17px;
+	color: black;
+	font-family: "Laro", sans-serif;
 }
 
 @media screen and (max-width: 1024px) {
