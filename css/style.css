@@ -15,8 +15,8 @@ html {
 	/* font-family: "raleway", sans-serif; */
 	font-family: "Laro", sans-serif;
 	line-height: 1.8em;
-	color: black;
-	/* background-color: black; */
+	color: white;
+	background-color: #232526;
 	/* background-color: #efefef; */
 	/* background: linear-gradient(
 		90deg,
@@ -311,12 +311,13 @@ nav.sticky .nav-links li a:hover {
 }
 
 .social-links > i {
-	color: black;
+	color: white;
 	cursor: pointer;
 }
 
 .social-links > i:hover {
-	color: #c0c0c0;
+	color: black;
+	/* color: #c0c0c0; */
 	/* color: white; */
 	transition: all 0.8s ease;
 	-webkit-transition: all 0.8s;
@@ -366,7 +367,7 @@ nav.sticky .nav-links li a:hover {
 	/* justify-content: flex-start; */
 	align-self: flex-start;
 	/* text-align: center; */
-	color: black;
+	color: white;
 	display: flex;
 	flex-direction: column;
 	/* justify-content: center; */
@@ -466,6 +467,7 @@ a[href="mailto:imsadeem98@gmail.com"] i:hover {
 /* EXPERIENCES STYLES START HERE */
 .job {
 	background-color: #f8eee8;
+	color: black;
 	/* background-color: rgba(240, 240, 240, .7); */
 	/* border: 1px solid black; */
 	width: 70%;
@@ -631,13 +633,12 @@ div > .skilltype-header {
 
 .skill-category > i {
 	font-size: 55px;
-	color: white;
 }
 
 div > .skill-category > i > p {
 	padding-top: 13px;
 	font-size: 17px;
-	color: black;
+	color: white;
 	font-family: "Laro", sans-serif;
 }
 
