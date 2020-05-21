@@ -44,6 +44,14 @@ html {
 	nav .nav-links li a:hover {
 		background: yellow;
 	}
+
+	.social-links > a > i:hover {
+		/* color: #c0c0c0; */
+		color: red;
+		transition: all 0.8s ease;
+		-webkit-transition: all 0.8s;
+		-moz-transition: all 0.8s;
+	}
 }
 
 section {
