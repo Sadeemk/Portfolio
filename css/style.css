@@ -17,7 +17,7 @@ html {
 	line-height: 1.8em;
 	color: black;
 	/* background-color: black; */
-	/* background-color: #efefef; */
+	background-color: #efefef;
 	/* background: linear-gradient(
 		90deg,
 		rgba(255, 255, 255, 1) 0%,
@@ -28,7 +28,7 @@ html {
 	background: -webkit-linear-gradient(to right, #ffffff, #ece9e6); 
 	background: linear-gradient(
 		to bottom,
-		#ffffff,
+		#ffffff,  
 		#ece9e6
 	);  */
 	/* background: #8e9eab;
@@ -315,9 +315,13 @@ nav.sticky .nav-links li a:hover {
 	cursor: pointer;
 }
 
-.social-links > i:hover {
+.social-links > a > i {
+	text-decoration: none;
+	color: black;
+}
+
+.social-links > a > i:hover {
 	color: #c0c0c0;
-	/* color: white; */
 	transition: all 0.8s ease;
 	-webkit-transition: all 0.8s;
 	-moz-transition: all 0.8s;
@@ -405,28 +409,28 @@ nav.sticky .nav-links li a:hover {
 	padding-right: 10px;
 }
 
-a[href="https://www.linkedin.com/in/sadeemk/"] i {
+li > a[href="https://www.linkedin.com/in/sadeemk/"] i {
 	/* color: black; */
 	color: #0e76a8;
 }
 
-a[href="https://twitter.com/sadeemkhan_"] i {
+li > a[href="https://twitter.com/sadeemkhan_"] i {
 	/* color: black; */
 	color: #1da1f2;
 }
 
-a[href="https://github.com/Sadeemk"] i {
+li > a[href="https://github.com/Sadeemk"] i {
 	color: #f1502f;
 }
 
-a[href="mailto:imsadeem98@gmail.com"] i {
+li > a[href="mailto:imsadeem98@gmail.com"] i {
 	color: #d44638;
 	transition: all 0.4s ease;
 	-webkit-transition: all 0.5s;
 	-moz-transition: all 0.5s;
 }
 
-a[href="https://www.linkedin.com/in/sadeemk/"] i:hover {
+li > a[href="https://www.linkedin.com/in/sadeemk/"] i:hover {
 	color: white;
 	background-color: #0e76a8;
 	/* border: 1px solid black; */
@@ -435,7 +439,7 @@ a[href="https://www.linkedin.com/in/sadeemk/"] i:hover {
 	-moz-transition: all 0.7s;
 }
 
-a[href="https://twitter.com/sadeemkhan_"] i:hover {
+li > a[href="https://twitter.com/sadeemkhan_"] i:hover {
 	color: white;
 	background-color: #1da1f2;
 	/* border: 1px solid black; */
@@ -444,7 +448,7 @@ a[href="https://twitter.com/sadeemkhan_"] i:hover {
 	-moz-transition: all 0.7s;
 }
 
-a[href="https://github.com/Sadeemk"] i:hover {
+li > a[href="https://github.com/Sadeemk"] i:hover {
 	color: white;
 	background-color: #f1502f;
 	/* border: 1px solid black; */
@@ -453,7 +457,7 @@ a[href="https://github.com/Sadeemk"] i:hover {
 	-moz-transition: all 0.7s;
 }
 
-a[href="mailto:imsadeem98@gmail.com"] i:hover {
+li > a[href="mailto:imsadeem98@gmail.com"] i:hover {
 	color: white;
 	background-color: #d44638;
 	/* border: 1px solid black; */
@@ -464,24 +468,83 @@ a[href="mailto:imsadeem98@gmail.com"] i:hover {
 /* ABOUT ME STYLES END HERE */
 
 /* EXPERIENCES STYLES START HERE */
+.timeline-container {
+	min-height: 100vh;
+	/* background-color: rgb(250, 250, 250); */
+	width: 80%;
+	margin-left: auto;
+	margin-right: 4%;
+	border-left: 2px solid gray;
+}
+
 .job {
+	display: flex;
+	flex-wrap: wrap;
+	padding-bottom: 45px;
+}
+
+.job-details {
+	flex: 1 1 50%;
+}
+
+.job-content {
+	flex: 1 1 50%;
+	padding: 10px 25px;
+	font-size: 14px;
+	line-height: 25px;
+}
+
+.job-content > p::before {
+	content: " - ";
+}
+
+@media screen and (max-width: 800px) {
+	.job-details {
+		flex: 1 1 100%;
+	}
+
+	.job-content {
+		flex: 1 1 100%;
+	}
+}
+
+.job-details {
+	padding: 10px 25px;
+}
+
+.job-details > .job-company {
+	text-decoration: none;
+	color: black;
+	font-size: 17px;
+}
+
+.job-details > .job-title {
+	font-weight: 400;
+	font-size: 14px;
+}
+
+.job-details > div {
+	font-size: 12px;
+}
+
+/* .job {
 	background-color: #f8eee8;
-	/* background-color: rgba(240, 240, 240, .7); */
-	/* border: 1px solid black; */
+	background-color: rgba(240, 240, 240, .7);
+	border: 1px solid black;
 	width: 70%;
 	height: 100%;
 	margin: 100px auto;
 	text-align: center;
-}
+} */
 
-.job-company {
+/* .job-company {
 	padding-top: 15px;
 }
 
 .company-img {
 	max-width: 75px;
 	max-height: 75px;
-}
+} */
 /* EXPERIENCES STYLES END HERE */
 
 /* PROJECTS STYLES START HERE */
@@ -508,6 +571,12 @@ a[href="mailto:imsadeem98@gmail.com"] i:hover {
 	transition: 0.5s ease-in-out;
 	-webkit-transition: 0.5s ease-in-out;
 	-moz-transition: 0.5s ease-in-out;
+}
+
+@media screen and (max-width: 620px) {
+	.card {
+		margin-bottom: 45px;
+	}
 }
 
 .card:hover {
@@ -544,7 +613,11 @@ a[href="mailto:imsadeem98@gmail.com"] i:hover {
 }
 
 .card .project-info {
+	width: 100%;
+	height: 100%;
 	position: relative;
+	display: flex;
+	flex-direction: column;
 	z-index: 3;
 	color: black;
 	opacity: 0;
@@ -561,24 +634,23 @@ a[href="mailto:imsadeem98@gmail.com"] i:hover {
 
 .card .project-info h1 {
 	margin: 0;
+	justify-content: flex-start;
 }
 
 .card .project-info .project-tools {
 	letter-spacing: 1px;
 	font-size: 13px;
-	margin-top: 1px;
-	margin-bottom: 25px;
 }
 
 .card .project-info .project-description {
 	letter-spacing: 1px;
 	font-size: 15px;
-	margin-top: 8px;
-	margin-bottom: 45px;
-	align-self: center;
+	margin-top: auto;
 }
 
 .card .project-info .project-btn {
+	margin-top: auto;
+	width: 50%;
 	text-decoration: none;
 	padding: 0.5rem 1rem;
 	background-color: rgb(214, 214, 214);
@@ -589,7 +661,6 @@ a[href="mailto:imsadeem98@gmail.com"] i:hover {
 	transition: 0.4s ease-in-out;
 	-webkit-transition: 0.5s ease-in-out;
 	-moz-transition: 0.5s ease-in-out;
-	align-self: flex-end;
 }
 
 .card .project-info .project-btn:hover {
