@@ -82,7 +82,7 @@ nav {
 
 nav.sticky .nav-links li a {
 	color: white;
-	transition: 1s;
+	transition: 0.3s;
 }
 
 nav.sticky .logo .nav-logo a {
@@ -226,7 +226,8 @@ nav.sticky .logo .nav-logo a {
 	transform: rotate(45deg) translate(-5px, -6px);
 }
 .active {
-	border-bottom: 2px solid white;
+	/* border-bottom: 2px solid white; */
+	color: red;
 	transition: all 0.6s ease;
 	-webkit-transition: all 0.5s;
 	-moz-transition: all 0.5s;
@@ -540,11 +541,21 @@ li > a[href="mailto:imsadeem98@gmail.com"] i:hover {
 }
 
 .company-img {
-	max-width: 70px;
-	max-height: 70px;
+	max-width: 85px;
+	max-height: 85px;
 	position: relative;
-	top: 0;
-	left: 250px;
+	top: 65px;
+	left: -115px;
+}
+
+img[src="imgs/dvc-icon.png"] {
+	top: 80px;
+}
+
+@media screen and (max-width: 768px) {
+	.company-img {
+		display: none;
+	}
 }
 
 .job-details > div {
@@ -689,6 +700,17 @@ li > a[href="mailto:imsadeem98@gmail.com"] i:hover {
 
 .card .project-info .project-btn:hover {
 	box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+}
+
+@media (pointer: coarse) {
+	.card::before {
+		opacity: 1;
+	}
+
+	.card .project-info {
+		opacity: 1;
+		transform: translateY(0px);
+	}
 }
 /* PROJECTS STYLES END HERE */
 
