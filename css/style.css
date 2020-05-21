@@ -143,7 +143,7 @@ nav.sticky .logo .nav-logo a {
 .burger div {
 	width: 25px;
 	height: 3px;
-	background-color: #ff3b3f;
+	background-color: #c9c9c9;
 	margin: 5px;
 	transition: all 0.3s ease;
 }
@@ -340,24 +340,10 @@ nav.sticky .nav-links li a:hover {
 	margin: auto;
 }
 
-@media screen and (max-width: 425px) {
-	.abt-container {
-		width: 100%;
-	}
-	.about-image {
-		flex: 1 1 300px;
-		align-self: center;
-		justify-content: center;
-		padding-top: 30px;
-		padding-left: 0px;
-	}
-}
-
 .about-image {
 	flex: 1 1 300px;
 	align-self: center;
 	height: 90vh;
-	/* padding-right: 5%; */
 }
 
 .about-image > img {
@@ -367,43 +353,31 @@ nav.sticky .nav-links li a:hover {
 
 .about-content {
 	flex: 1 1 300px;
-	min-height: 70vh;
-	/* background-color: #34373c; */
-	/* justify-content: flex-start; */
+	min-height: 80vh;
 	align-self: flex-start;
-	/* text-align: center; */
 	color: black;
 	display: flex;
 	flex-direction: column;
-	/* justify-content: center; */
 	margin: 15px;
 }
 
 .about-content > h2 {
-	/* display: flex; */
-	/* justify-content: center; */
 	align-self: center;
 	margin-top: 35px;
 }
 
 .about-content > .about-description {
-	/* display: flex; */
-	/* font-weight: 700; */
 	margin-top: auto;
-	/* align-self: flex-end; */
 }
 
 .about-social {
-	/* justify-content: flex-end; */
 	margin-top: auto;
 }
 
 .about-content > .about-social > ul {
 	display: flex;
 	justify-content: flex-start;
-	/* align-items: flex-end; */
 	padding: 0;
-	/* margin-top: auto; */
 }
 
 .about-content > .about-social > ul > li {
@@ -467,6 +441,45 @@ li > a[href="mailto:imsadeem98@gmail.com"] i:hover {
 	-webkit-transition: all 0.7s;
 	-moz-transition: all 0.7s;
 }
+
+@media screen and (max-width: 768px) {
+	.abt-container {
+		width: 100%;
+	}
+	.about-image {
+		display: flex;
+		flex: 1 1 100%;
+		/* align-self: center; */
+		/* justify-content: center; */
+		margin: auto;
+		padding-top: 30px;
+		padding-left: 0px;
+	}
+
+	.about-image > img {
+		margin: auto;
+	}
+
+	.about-content > .about-description {
+		margin-top: 50px;
+		text-align: center;
+	}
+
+	.about-social {
+		margin-top: 45px;
+	}
+
+	.about-content > .about-social > ul {
+		display: flex;
+		justify-content: center;
+		padding: 0;
+	}
+
+	.about-content > .about-social > ul > li {
+		list-style: none;
+		padding-right: 10px;
+	}
+}
 /* ABOUT ME STYLES END HERE */
 
 /* EXPERIENCES STYLES START HERE */
@@ -515,7 +528,7 @@ li > a[href="mailto:imsadeem98@gmail.com"] i:hover {
 	content: " - ";
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
 	.job-details {
 		flex: 1 1 100%;
 	}
@@ -764,7 +777,7 @@ div > .skill-category > i > p {
 	}
 }
 
-@media screen and (max-width: 868px) {
+@media screen and (max-width: 768px) {
 	.skills-container {
 		/* min-height: 500px; */
 		display: grid;
