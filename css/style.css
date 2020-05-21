@@ -39,6 +39,13 @@ html {
 		#e9f4ff
 	); */
 }
+
+@media (hover: hover) and (pointer: fine) {
+	nav .nav-links li a:hover {
+		background: yellow;
+	}
+}
+
 section {
 	margin-bottom: 50px;
 }
@@ -234,17 +241,17 @@ nav.sticky .logo .nav-logo a {
 nav .nav-links li a:hover {
 	color: #b80f0a;
 	/* color: #f0e089; */
-	transition: all 0.4s;
-	-webkit-transition: all 0.5s;
-	-moz-transition: all 0.5s;
+	transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
 }
 
 nav.sticky .nav-links li a:hover {
 	color: #b80f0a;
 	/* color: #f0e089; */
-	transition: all 0.4s;
-	-webkit-transition: all 0.5s;
-	-moz-transition: all 0.5s;
+	transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
 }
 /* NAV STYLES END */
 
@@ -474,7 +481,7 @@ li > a[href="mailto:imsadeem98@gmail.com"] i:hover {
 	width: 80%;
 	margin-left: auto;
 	margin-right: 4%;
-	border-left: 2px solid gray;
+	border-left: 2px solid #c0c0c0;
 }
 
 .job {
@@ -521,6 +528,14 @@ li > a[href="mailto:imsadeem98@gmail.com"] i:hover {
 .job-details > .job-title {
 	font-weight: 400;
 	font-size: 14px;
+}
+
+.company-img {
+	max-width: 70px;
+	max-height: 70px;
+	position: relative;
+	top: 0;
+	left: 250px;
 }
 
 .job-details > div {
