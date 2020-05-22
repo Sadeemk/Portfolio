@@ -385,28 +385,28 @@ nav.sticky .nav-links li a:hover {
 	padding-right: 10px;
 }
 
-li > a[href="https://www.linkedin.com/in/sadeemk/"] i {
+.about-social > ul > li > a[href="https://www.linkedin.com/in/sadeemk/"] i {
 	/* color: black; */
 	color: #0e76a8;
 }
 
-li > a[href="https://twitter.com/sadeemkhan_"] i {
+.about-social > ul > li > a[href="https://twitter.com/sadeemkhan_"] i {
 	/* color: black; */
 	color: #1da1f2;
 }
 
-li > a[href="https://github.com/Sadeemk"] i {
+.about-social > ul > li > a[href="https://github.com/Sadeemk"] i {
 	color: #f1502f;
 }
 
-li > a[href="mailto:imsadeem98@gmail.com"] i {
+.about-social > ul > li > a[href="mailto:imsadeem98@gmail.com"] i {
 	color: #d44638;
 	transition: all 0.4s ease;
 	-webkit-transition: all 0.5s;
 	-moz-transition: all 0.5s;
 }
 
-li > a[href="https://www.linkedin.com/in/sadeemk/"] i:hover {
+.about-social > ul > li > a[href="https://www.linkedin.com/in/sadeemk/"] i:hover {
 	color: white;
 	background-color: #0e76a8;
 	/* border: 1px solid black; */
@@ -415,7 +415,7 @@ li > a[href="https://www.linkedin.com/in/sadeemk/"] i:hover {
 	-moz-transition: all 0.7s;
 }
 
-li > a[href="https://twitter.com/sadeemkhan_"] i:hover {
+.about-social > ul > li > a[href="https://twitter.com/sadeemkhan_"] i:hover {
 	color: white;
 	background-color: #1da1f2;
 	/* border: 1px solid black; */
@@ -424,7 +424,7 @@ li > a[href="https://twitter.com/sadeemkhan_"] i:hover {
 	-moz-transition: all 0.7s;
 }
 
-li > a[href="https://github.com/Sadeemk"] i:hover {
+.about-social > ul > li > a[href="https://github.com/Sadeemk"] i:hover {
 	color: white;
 	background-color: #f1502f;
 	/* border: 1px solid black; */
@@ -433,7 +433,7 @@ li > a[href="https://github.com/Sadeemk"] i:hover {
 	-moz-transition: all 0.7s;
 }
 
-li > a[href="mailto:imsadeem98@gmail.com"] i:hover {
+.about-social > ul > li > a[href="mailto:imsadeem98@gmail.com"] i:hover {
 	color: white;
 	background-color: #d44638;
 	/* border: 1px solid black; */
@@ -786,3 +786,52 @@ div > .skill-category > i > p {
 	}
 }
 /* MY SKILLS STYLES END HERE */
+
+/* FOOTER STYLES START HERE */
+
+footer {
+	background-color: #ebebebe1;
+	height: 80px;
+	display: flex;
+	align-items: center;
+}
+
+.copyright > p {
+	padding-left: 10px;
+}
+
+footer > ul {
+	margin-left: auto;
+	padding-right: 10px;
+}
+
+footer > ul > li {
+	list-style: none;
+}
+
+footer > ul > li > a > i {
+	color: black;
+}
+
+footer > ul > li > a > i:hover {
+	color: #c0c0c0;
+	transition: all 0.8s ease;
+	-webkit-transition: all 0.8s;
+	-moz-transition: all 0.8s;
+}
+
+@media screen and (max-width: 425px) {
+	footer {
+		display: flex;
+		/* align-items: flex-start; */
+		/* justify-content: flex-start; */
+		flex-direction: column;
+	}
+	.copyright > p {
+		padding-top: 5px;
+	}
+	footer > ul {
+		margin: 0;
+		padding-top: 10px;
+	}
+}
