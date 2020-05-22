@@ -233,9 +233,29 @@ nav.sticky .logo .nav-logo a {
 	-moz-transition: all 0.5s;
 }
 
-nav .nav-links li a:hover {
+nav .nav-links li a::after {
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 2px;
+	display: block;
+	margin-top: 0px;
+	right: 0;
+	background: #fff;
+	transition: width .2s ease;
+	-webkit-transition: width .2s ease;
+	-moz-transition: width .2s ease;
+}
+
+nav .nav-links li a:hover::after {
+	width: 100%;
+	left: 0;
+	background: #fff;
+}
+
+/* nav .nav-links li a:hover {
 	color: #b80f0a;
-	/* color: #f0e089; */
+	border-bottom: 2px solid white;
 	transition: all 0.3s;
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
@@ -243,11 +263,10 @@ nav .nav-links li a:hover {
 
 nav.sticky .nav-links li a:hover {
 	color: #b80f0a;
-	/* color: #f0e089; */
 	transition: all 0.3s;
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
-}
+} */
 /* NAV STYLES END */
 
 /* HOMEPAGE STYLES START HERE */
