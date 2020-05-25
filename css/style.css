@@ -172,7 +172,7 @@ nav.sticky .logo .nav-logo a {
 	}
 
 	.nav-links {
-		position: absolute;
+		position: relative;
 		right: 0px;
 		height: 92vh;
 		top: 8vh;
@@ -226,35 +226,33 @@ nav.sticky .logo .nav-logo a {
 	transform: rotate(45deg) translate(-5px, -6px);
 }
 .active {
-	/* border-bottom: 2px solid white; */
-	color: red;
+	border-bottom: 2px solid white;
+	/* color: red; */
 	transition: all 0.6s ease;
 	-webkit-transition: all 0.5s;
 	-moz-transition: all 0.5s;
 }
 
-nav .nav-links li a::after {
+/* nav > .nav-links > li > a::after {
 	content: '';
-	position: absolute;
+	position: relative;
 	width: 0;
-	height: 2px;
+	height: 3px;
 	display: block;
-	margin-top: 0px;
+	margin-top: 5px;
 	right: 0;
 	background: #fff;
 	transition: width .2s ease;
 	-webkit-transition: width .2s ease;
-	-moz-transition: width .2s ease;
 }
 
 nav .nav-links li a:hover::after {
 	width: 100%;
 	left: 0;
 	background: #fff;
-}
+} */
 
-/* nav .nav-links li a:hover {
-	color: #b80f0a;
+nav .nav-links li a:hover {
 	border-bottom: 2px solid white;
 	transition: all 0.3s;
 	-webkit-transition: all 0.3s;
@@ -262,11 +260,11 @@ nav .nav-links li a:hover::after {
 }
 
 nav.sticky .nav-links li a:hover {
-	color: #b80f0a;
+	border-bottom: 2px solid white;
 	transition: all 0.3s;
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
-} */
+}
 /* NAV STYLES END */
 
 /* HOMEPAGE STYLES START HERE */
